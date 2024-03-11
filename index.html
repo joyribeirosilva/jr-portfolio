@@ -1,18 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ping Pong</title>
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <link href="style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joyce Ribeiro</title>
+
+    <link rel="icon" type="image/png" href="imagens/estrela.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" />
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-  <div>
-    <h1 class="mb-5">Ping-Pong Game</h1>
-    <canvas id="pongCanvas" width="800" height="400"></canvas>
-  </div>
+    <div class="stars-container"></div>
+    <div class="container-fluid">
+        <div id="sparkles"></div>
+        <div class="header">
+            <div class="menu d-flex flex-column justify-content-center align-items-center">
+                <ul>
+                    <li><a href="#home">MENU</a></li>
+                    <li><a href="#about">SOBRE</a></li>
+                    <li><a href="#skill">HABILIDADES</a></li>
+                    <li><a href="#project">PROJETOS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class=" intro-section container-fluid mt-8 " id="home">
+            <div class="row">
+                <div
+                    class=" col-sm-12 col-md-6 text-center d-flex flex-column justify-content-center align-items-center gap-2 ml-md-auto mr-md-4">
+                    <div id="typing-container"></div>
+                    <div data-aos="fade-right" data-aos-duration="1500">
+                        <div>
+                            Olá, sou desenvolvedora-web. Gosto bastante de tecnologia e suas possibilidades.
+                        </div>
+                    </div>
+                    <div class="m-3" data-aos="fade-right" data-aos-duration="1500">
+                        <div>
+                            CONTATOS:
+                        </div>
+                    </div>
+                    <div class="mr-3" data-aos="fade-right" data-aos-duration="1500">
+                        <div class="d-flex flex-column">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <span>
+                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-grow elementor-repeater-item-3388c9b"
+                                            href="https://www.linkedin.com/in/joyce-ribeiro-90b826187/" target="_blank">
+                                            <img src="imagens/icons8-linkedin.png"
+                                                alt="Descrição da imagem" style="width: 50px; height: 50px;" />
+                                            <span class="elementor-screen-only"></span>
+                                        </a>
+                                        <a class="elementor-icon elementor-social-icon elementor-social-icon-github elementor-animation-grow"
+                                            href="https://github.com/joyribeirosilva" target="_blank">
+                                            <img src="imagens/icons8-github.png"
+                                                alt="Descrição da imagem" style="width: 50px; height: 50px;" />
+                                            <span class="elementor-screen-only"></span>
+                                        </a>
+                                        <a href="https://wa.me/5511957056687">
+                                            <i aria-hidden="true" class="fas fa-phone-alt">
+                                                <img src="imagens/icons8-telefone.png"
+                                                    alt="Descrição da imagem" style="width: 50px; height: 50px;" />
+                                                <span class="elementor-icon-list-text"></span>
+                                            </i>
+                                        </a>
+                                        <a href="mailto:joyce.ribeirosilva1@outlook.com">
+                                            <span class="elementor-icon-list-icon">
+                                                <img src="imagens/icons8-gmail.png"
+                                                    alt="Descrição da imagem" style="width: 50px; height: 50px;" />
+                                                <span class="elementor-icon-list-text"></span>
+                                            </span>
+                                        </a>
+                                        <a href="/imagens/curriculo.pdf" download class="btn btn-primary"
+                                            style="background: transparent; border: none; padding: 0;">
+                                            <img src="imagens/icons8-pdf.png" alt="Descrição da imagem"
+                                                style="width: 50px; height: 50px;" />
+                                            <span class="elementor-screen-only"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div data-aos="fade-up" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="col-sm-12 col-md-6" id="imagens-home-container">
+                            <img src="imagens/star.png"
+                                alt="Descrição da imagem"style="max-width: 500px; max-height: 500px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-section container-fluid mt-8" id="about">
+            <div class="row">
+                <div class="col-sm-12 col-md-6" id="imagens-lua2-container" data-aos="fade-right"
+                    data-aos-duration="1500">
+                    <img src="imagens/lua2.png"
+                        alt="Descrição da imagem"style="max-width: 450px; max-height: 450px;" />
+                </div>
+                <div
+                    class=" col-sm-12 col-md-6 text-center d-flex flex-column justify-content-center align-items-center gap-2">
+                    <div data-aos="fade-left" data-aos-duration="1500">
+                        SOBRE MIM:
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500">
+                        <p>
+                            Sou uma profissional dedicada e apaixonada por Desenvolvimento de Sistemas e construção de
+                            websites. Tenho uma especialização sólida em linguagens como PHP, JavaScript, HTML5 e CSS.
+                            Minha jornada inclui a implementação de soluções web inovadoras, e estou comprometida em
+                            aprimorar constantemente minhas habilidades para contribuir efetivamente para o sucesso de
+                            projetos desafiadores. Estou pronta para enfrentar novos desafios e crescer
+                            profissionalmente.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-section container-fluid mt-8" id="skill">
+            <div class="row">
+                <div
+                    class=" col-sm-12 col-md-6 text-center d-flex flex-column justify-content-center align-items-center">
+                    <div data-aos="fade-right" data-aos-duration="1500"data-aos-delay="100">
+                        HABILIDADES:
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="row ">
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="200">
+                                <img src="imagens/javascript.jpg" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="100">
+                                <img src="imagens/laravel.webp" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="200">
+                                <img src="imagens/php.png" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="100">
+                                <img src="imagens/bootstrap.jpg" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="200">
+                                <img src="imagens/html5.jpg" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="100">
+                                <img src="imagens/css.jpg" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="200">
+                                <img src="imagens/java-logo.jpg" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                            <div class="col-6 mb-3" data-aos="fade-right"
+                                data-aos-duration="1500"data-aos-delay="100">
+                                <img src="imagens/PYTHON.png" alt="Descrição da imagem"
+                                    style="width: 100%; height: 100px; border-radius: 10px; border: 2px solid #000;" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1500"data-aos-delay="200">
+                    <div class="col-sm-12 col-md-6" id="imagens-astronaulta-container">
+                        <img src="imagens/astronaulta.png"
+                            alt="Descrição da imagem"style="max-width: 400px; max-height: 400px;"
+                            class="hide-on-mobile" />
+                    </div>
+                </div>
+                <div class="container mt-5 mb-5 fixed-bottom"></div>
+            </div>
+        </div>
+
+        <div class="intro-section container-fluid mt-8" id="project" style="margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-sm-12 col-md-6" id="imagens-foguete-container"data-aos="fade-right"
+                    data-aos-duration="1500"data-aos-delay="400">
+                    <img src="imagens/foguete.png" alt="Descrição da imagem"
+                        style="max-width: 450px; max-height: 450px;" />
+                </div>
+                <div
+                    class=" col-sm-12 col-md-6 text-center d-flex flex-column justify-content-center align-items-center gap-2">
+                    <div data-aos="fade-left" data-aos-duration="1500"data-aos-delay="400">
+                        PROJETOS:
+                    </div>
+                   <p>Em Construção</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="script.js"></SCRipt>
+
+<script src="js/animation.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@17.2.0/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="js/aos.js"></script>
+
 </html>
